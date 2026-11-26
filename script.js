@@ -3,60 +3,64 @@ let productos = [
         id: 1,
         nombre: "PC Gaming Ryzen 5 5600X",
         precio: 749.99,
-        imagen: "img/pc-gaming.jpg"
+        imagen: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5"
     },
 
     {
         id: 2,
         nombre: "NVIDIA GeForce RTX 4060 8GB",
         precio: 299.99,
-        imagen: "img/rtx-4060.jpg"
+        imagen: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7"
     },
 
     {
         id: 3,
         nombre: "AMD Ryzen 7 7800X3D",
         precio: 389.99,
-        imagen: "img/ryzen-7.jpg"
+        imagen: "https://images.unsplash.com/photo-1591488320449-011701bb6704"
     },
 
     {
         id: 4,
         nombre: "Monitor Gaming 27 pulgadas 180Hz",
         precio: 199.99,
-        imagen: "img/monitor.jpg"
+        imagen: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf"
     },
 
     {
         id: 5,
         nombre: "Teclado Mecánico RGB",
         precio: 69.99,
-        imagen: "img/teclado.jpg"
+        imagen: "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
     },
 
     {
         id: 6,
         nombre: "Ratón Gaming RGB 12000 DPI",
         precio: 39.99,
-        imagen: "img/raton.jpg"
+        imagen: "https://images.unsplash.com/photo-1527814050087-3793815479db"
     },
 
     {
         id: 7,
         nombre: "32GB RAM DDR5",
         precio: 119.99,
-        imagen: "img/ram.jpg"
+        imagen: "https://images.unsplash.com/photo-1562976540-1502c2145186"
     },
 
     {
         id: 8,
         nombre: "SSD NVMe 1TB",
         precio: 79.99,
-        imagen: "img/ssd.jpg"
+        imagen: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b"
     }
 ];
 
+
 let carrito = [];
+
+
+/* MOSTRAR PRODUCTOS */
 
 function mostrarProductos(lista = productos) {
 
@@ -97,6 +101,9 @@ function mostrarProductos(lista = productos) {
     });
 }
 
+
+/* AÑADIR AL CARRITO */
+
 function añadirCarrito(id) {
 
     let producto = productos.find(p => p.id === id);
@@ -108,11 +115,17 @@ function añadirCarrito(id) {
     alert("Producto añadido al carrito");
 }
 
+
+/* ACTUALIZAR CONTADOR */
+
 function actualizarContador() {
 
     document.getElementById("contador").textContent = carrito.length;
 
 }
+
+
+/* MOSTRAR CARRITO */
 
 function mostrarCarrito() {
 
@@ -122,11 +135,17 @@ function mostrarCarrito() {
 
 }
 
+
+/* CERRAR CARRITO */
+
 function cerrarCarrito() {
 
     document.getElementById("carrito-ventana").style.display = "none";
 
 }
+
+
+/* MOSTRAR PRODUCTOS DEL CARRITO */
 
 function mostrarProductosCarrito() {
 
@@ -170,6 +189,9 @@ function mostrarProductosCarrito() {
 
 }
 
+
+/* ELIMINAR PRODUCTO */
+
 function eliminarProducto(indice) {
 
     carrito.splice(indice, 1);
@@ -179,6 +201,9 @@ function eliminarProducto(indice) {
     mostrarProductosCarrito();
 
 }
+
+
+/* BUSCADOR */
 
 function buscar() {
 
@@ -192,6 +217,9 @@ function buscar() {
 
 }
 
+
+/* ORDENAR POR PRECIO */
+
 function ordenarPrecio() {
 
     productos.sort((a, b) => a.precio - b.precio);
@@ -199,6 +227,9 @@ function ordenarPrecio() {
     mostrarProductos();
 
 }
+
+
+/* COMPRAR */
 
 function comprar() {
 
@@ -220,6 +251,7 @@ function comprar() {
 
 }
 
-mostrarProductos();
+
+/* CARGAR PRODUCTOS */
 
 mostrarProductos();
