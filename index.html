@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCComponentes - Tecnología</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="top">
+        <div class="logo">
+            <span>Pc</span>Componentes
+        </div>
+
+        <div class="buscador">
+            <input type="text" id="busqueda" placeholder="Buscar productos, marcas y categorías">
+            <button onclick="buscar()">🔍</button>
+        </div>
+
+        <div class="usuario">
+            👤 Mi cuenta
+        </div>
+
+        <div class="carrito" onclick="mostrarCarrito()">
+            🛒 Carrito <span id="contador">0</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#">Categorías</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Ordenadores</a>
+        <a href="#">Componentes</a>
+        <a href="#">Periféricos</a>
+        <a href="#">Gaming</a>
+        <a href="#">Portátiles</a>
+        <a href="#">Monitores</a>
+    </nav>
+
+</header>
+
+
+<section class="banner">
+
+    <div class="banner-text">
+        <h1>Todo lo que necesitas para tu PC</h1>
+        <p>Componentes, ordenadores, periféricos y mucho más</p>
+        <button>Ver productos</button>
+    </div>
+
+</section>
+
+
+<section class="categorias">
+
+    <h2>Compra por categorías</h2>
+
+    <div class="categorias-grid">
+
+        <div class="categoria">
+            <div>🖥️</div>
+            <p>Ordenadores</p>
+        </div>
+
+        <div class="categoria">
+            <div>💻</div>
+            <p>Portátiles</p>
+        </div>
+
+        <div class="categoria">
+            <div>🎮</div>
+            <p>Gaming</p>
+        </div>
+
+        <div class="categoria">
+            <div>⌨️</div>
+            <p>Periféricos</p>
+        </div>
+
+        <div class="categoria">
+            <div>🧠</div>
+            <p>Componentes</p>
+        </div>
+
+        <div class="categoria">
+            <div>🖥️</div>
+            <p>Monitores</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="productos">
+
+    <div class="titulo-productos">
+        <h2>Productos destacados</h2>
+        <button onclick="ordenarPrecio()">Ordenar por precio</button>
+    </div>
+
+    <div id="lista-productos" class="productos-grid"></div>
+
+</section>
+
+
+<div id="carrito-ventana" class="carrito-ventana">
+
+    <div class="carrito-contenido">
+
+        <button class="cerrar" onclick="cerrarCarrito()">✕</button>
+
+        <h2>🛒 Tu carrito</h2>
+
+        <div id="productos-carrito"></div>
+
+        <div class="total">
+            <h3>Total: <span id="total">0</span> €</h3>
+        </div>
+
+        <button class="comprar" onclick="comprar()">
+            Finalizar compra
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <div>
+        <h3>PCComponentes</h3>
+        <p>Tu tienda de tecnología online</p>
+    </div>
+
+    <div>
+        <h3>Ayuda</h3>
+        <p>Contacto</p>
+        <p>Envíos</p>
+        <p>Devoluciones</p>
+    </div>
+
+    <div>
+        <h3>Información</h3>
+        <p>Sobre nosotros</p>
+        <p>Condiciones de compra</p>
+        <p>Privacidad</p>
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
