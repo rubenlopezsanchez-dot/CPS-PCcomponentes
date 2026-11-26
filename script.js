@@ -3,63 +3,60 @@ let productos = [
         id: 1,
         nombre: "PC Gaming Ryzen 5 5600X",
         precio: 749.99,
-        imagen: "https://placehold.co/400x300?text=PC+Gaming"
+        imagen: "img/pc-gaming.jpg"
     },
 
     {
         id: 2,
         nombre: "NVIDIA GeForce RTX 4060 8GB",
         precio: 299.99,
-        imagen: "https://placehold.co/400x300?text=RTX+4060"
+        imagen: "img/rtx-4060.jpg"
     },
 
     {
         id: 3,
         nombre: "AMD Ryzen 7 7800X3D",
         precio: 389.99,
-        imagen: "https://placehold.co/400x300?text=Ryzen+7"
+        imagen: "img/ryzen-7.jpg"
     },
 
     {
         id: 4,
         nombre: "Monitor Gaming 27 pulgadas 180Hz",
         precio: 199.99,
-        imagen: "https://placehold.co/400x300?text=Monitor"
+        imagen: "img/monitor.jpg"
     },
 
     {
         id: 5,
         nombre: "Teclado Mecánico RGB",
         precio: 69.99,
-        imagen: "https://placehold.co/400x300?text=Teclado"
+        imagen: "img/teclado.jpg"
     },
 
     {
         id: 6,
         nombre: "Ratón Gaming RGB 12000 DPI",
         precio: 39.99,
-        imagen: "https://placehold.co/400x300?text=Raton"
+        imagen: "img/raton.jpg"
     },
 
     {
         id: 7,
         nombre: "32GB RAM DDR5",
         precio: 119.99,
-        imagen: "https://placehold.co/400x300?text=RAM+DDR5"
+        imagen: "img/ram.jpg"
     },
 
     {
         id: 8,
         nombre: "SSD NVMe 1TB",
         precio: 79.99,
-        imagen: "https://placehold.co/400x300?text=SSD+1TB"
+        imagen: "img/ssd.jpg"
     }
 ];
 
 let carrito = [];
-
-
-/* MOSTRAR PRODUCTOS */
 
 function mostrarProductos(lista = productos) {
 
@@ -73,7 +70,7 @@ function mostrarProductos(lista = productos) {
 
         <div class="producto">
 
-            <img src="${producto.imagen}">
+            <img src="${producto.imagen}" alt="${producto.nombre}">
 
             <h3>${producto.nombre}</h3>
 
@@ -100,9 +97,6 @@ function mostrarProductos(lista = productos) {
     });
 }
 
-
-/* AÑADIR AL CARRITO */
-
 function añadirCarrito(id) {
 
     let producto = productos.find(p => p.id === id);
@@ -114,17 +108,11 @@ function añadirCarrito(id) {
     alert("Producto añadido al carrito");
 }
 
-
-/* ACTUALIZAR CONTADOR */
-
 function actualizarContador() {
 
     document.getElementById("contador").textContent = carrito.length;
 
 }
-
-
-/* MOSTRAR CARRITO */
 
 function mostrarCarrito() {
 
@@ -134,17 +122,11 @@ function mostrarCarrito() {
 
 }
 
-
-/* CERRAR CARRITO */
-
 function cerrarCarrito() {
 
     document.getElementById("carrito-ventana").style.display = "none";
 
 }
-
-
-/* PRODUCTOS DEL CARRITO */
 
 function mostrarProductosCarrito() {
 
@@ -188,9 +170,6 @@ function mostrarProductosCarrito() {
 
 }
 
-
-/* ELIMINAR PRODUCTO */
-
 function eliminarProducto(indice) {
 
     carrito.splice(indice, 1);
@@ -200,9 +179,6 @@ function eliminarProducto(indice) {
     mostrarProductosCarrito();
 
 }
-
-
-/* BUSCADOR */
 
 function buscar() {
 
@@ -216,9 +192,6 @@ function buscar() {
 
 }
 
-
-/* ORDENAR POR PRECIO */
-
 function ordenarPrecio() {
 
     productos.sort((a, b) => a.precio - b.precio);
@@ -226,9 +199,6 @@ function ordenarPrecio() {
     mostrarProductos();
 
 }
-
-
-/* COMPRAR */
 
 function comprar() {
 
@@ -250,7 +220,6 @@ function comprar() {
 
 }
 
-
-/* CARGAR PRODUCTOS */
+mostrarProductos();
 
 mostrarProductos();
