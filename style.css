@@ -213,8 +213,9 @@ nav a:hover {
 
 .producto img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: contain;
+    margin-bottom: 10px;
 }
 
 .producto h3 {
